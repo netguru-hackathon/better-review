@@ -3,7 +3,9 @@ chrome.extension.sendMessage({}, function(response) {
   if (document.readyState === "complete") {
     clearInterval(readyStateCheckInterval);
 
-    $("span").css("color", "red");
+    $(".blob-code-inner").click(function() {
+      $(".blob-code-inner").css("background-color", "red");
+    });
   }
   }, 10);
 });
