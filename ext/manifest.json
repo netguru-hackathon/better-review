@@ -43,6 +43,7 @@
       ],
       "js": [
         "src/inject/inject.js",
+        "js/main.js",
         "js/jquery/jquery.js"
       ]
     }
