@@ -48,7 +48,7 @@
   };
 
   window.doStuff = () => {
-    const url = `${window.BetterReview.getApiUrl()};
+    const url = `${window.BetterReview.getApiUrl()}`;
 
     return window.BetterReview.request(url).then(response => {
       const status = response.status;
