@@ -3,7 +3,7 @@
 
   window.BetterReview = (() => {
     const defaults = {
-      rootUrl: 'https://api.github.com/',
+      rootUrl: 'https://api.github.com',
       oauthToken: ''
     };
 
@@ -47,12 +47,8 @@
     return fetch(url, {headers});
   };
 
-  window.BetterReview.getApiUrl = () => {
-    return 'https://api.github.com/';
-  };
-
   window.BetterReview.PullRequests = () => {
-    const url = `${window.BetterReview.getApiUrl()}/repos/sindresorhus/notifier-for-github-chrome/pulls`;
+    const url = `${window.BetterReview.defaults.rootUrl}/repos/sindresorhus/notifier-for-github-chrome/pulls`;
 
     return window.BetterReview.request(url).then(response => {
       console.log("response", response);
