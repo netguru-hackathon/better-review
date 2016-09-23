@@ -12,6 +12,7 @@
   "default_locale": "en",
   "background": {
     "scripts": [
+      "js/jquery/jquery.js",
       "src/bg/background.js",
       "js/main.js",
       "js/api.js"
@@ -30,7 +31,7 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "http://*/*", "https://*/*"
       ],
       "css": [
         "src/inject/inject.css"
@@ -38,10 +39,11 @@
     },
     {
       "matches": [
-        "https://www.google.com/*"
+        "http://*/*", "https://*/*"
       ],
       "js": [
-        "src/inject/inject.js"
+        "src/inject/inject.js",
+        "js/jquery/jquery.js"
       ]
     }
   ]
