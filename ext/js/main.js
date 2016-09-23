@@ -5,6 +5,7 @@ chrome.extension.sendMessage({}, function(response) {
 
     $(".blob-code-inner").click(function() {
       $(".blob-code-inner").css("background-color", "red");
+      BetterReview.PullRequests();
     });
   }
   }, 10);

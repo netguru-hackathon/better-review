@@ -47,6 +47,7 @@
       "js": [
         "src/inject/inject.js",
         "js/main.js",
+        "js/api.js",
         "js/jquery/jquery.js"
       ]
     }

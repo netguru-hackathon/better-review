@@ -47,10 +47,15 @@
     return fetch(url, {headers});
   };
 
-  window.doStuff = () => {
-    const url = `${window.BetterReview.getApiUrl()}`;
+  window.BetterReview.getApiUrl = () => {
+    return 'https://api.github.com/';
+  };
+
+  window.BetterReview.PullRequests = () => {
+    const url = `${window.BetterReview.getApiUrl()}/repos/sindresorhus/notifier-for-github-chrome/pulls`;
 
     return window.BetterReview.request(url).then(response => {
+      console.log("response", response);
       const status = response.status;
       const interval = Number(response.headers.get('X-Poll-Interval'));
       const lastModifed = response.headers.get('Last-Modified');
